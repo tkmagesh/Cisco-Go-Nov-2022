@@ -52,4 +52,12 @@ Why Go?
         - go keyword, channel datatype, channel operator ( <- ), range, select case
         - APIs for concurrency (sync package, sync/atomic package)
 
+API Documentation
+    - https://pkg.go.dev/std
 
+
+To run a go program
+    go run <file_name.go>
+
+To create a build
+    go build <file_name.go>
