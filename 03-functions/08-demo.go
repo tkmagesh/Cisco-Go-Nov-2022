@@ -7,6 +7,8 @@ import (
 	"time"
 )
 
+type Operation func(int, int)
+
 func main() {
 	/*
 		add(100,200)
@@ -34,7 +36,7 @@ func main() {
 	getProfileOperation(getLogOperation(subtract))(100, 200)
 }
 
-func getProfileOperation(operation func(int, int)) func(int, int) {
+func getProfileOperation(operation Operation) Operation {
 	return func(x, y int) {
 		start := time.Now()
 		operation(x, y)
@@ -43,7 +45,7 @@ func getProfileOperation(operation func(int, int)) func(int, int) {
 	}
 }
 
-func getLogOperation(operation func(int, int)) func(int, int) {
+func getLogOperation(operation Operation) Operation {
 	return func(x, y int) {
 		log.Println("operation started")
 		operation(x, y)
