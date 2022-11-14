@@ -127,3 +127,13 @@ Assignment-2:
 	If the user choice is NOT 1 - 5
 		print "Invalid choice"
 		display the menu again
+
+Functions
+    1. Go functions can return more than one value
+    2. Go has support for variadic functions
+    3. Go has support for anonymous functions
+    4. Go has support for higher order functions
+        functions are first class objects
+        * assign functions to variables
+        * pass a function as an argument
+        * return a function as a return value
