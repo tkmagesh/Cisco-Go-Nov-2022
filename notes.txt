@@ -137,3 +137,6 @@ Functions
         * assign functions to variables
         * pass a function as an argument
         * return a function as a return value
+
+Assignment-03
+    Refactor the solution for Assignment-02 with functions where each function has only one responsibility
