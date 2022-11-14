@@ -61,3 +61,39 @@ To run a go program
 
 To create a build
     go build <file_name.go>
+    
+To cross compile
+    GOARCH=386 GOOS=windows go build 01-hello-world.go
+
+To list the environment variables
+    go env
+    go env GOOS GOARCH
+
+To get the list of OS/Arch for cross compilation
+    go tool dist list
+
+
+Data Types
+    bool
+    string
+
+    int
+    int8
+    int16
+    int32
+    int64
+
+    unit
+    unit8
+    unit16
+    unit32
+    unit64
+
+    float32
+    float64
+
+    complex64 [real (float32) + imaginary (float32)]
+    complex128 [real (float64) + imaginary (float64)]
+
+    byte (alias for uint8)
+    rune (alias for int32) (unicode code point)
