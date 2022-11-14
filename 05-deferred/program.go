@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func main() {
+	x := 100
 	defer func() {
-		fmt.Println("	[@main] - deferred")
+		fmt.Println("	[@main] - deferred, x =", x)
 	}()
 	fmt.Println("main started")
 	f1()
