@@ -9,4 +9,47 @@ Schedule:
 
 Methodology:
     * No powerpoints
-    
+    * 100% hands on driven
+
+Github Repo:
+    https://github.com/tkmagesh/Cisco-Go-Nov-2022
+
+Software Requirements
+    * Go tools (https://go.dev/dl)
+    * Visual Studio Code (https://code.visualstudio.com)
+    * Go extension for Visual Studio Clode (https://marketplace.visualstudio.com/items?itemName=golang.Go)
+    * Setup the tools
+        In Visual Studio Code
+            Ctrl/CMD + Shift + P
+            Go: Install/Update tools
+            Select all the tools
+            Install them
+
+
+Paradox Of Choice (Barry Schwartz)
+
+Why Go?
+    * Simplicity
+        Only 25 keywords
+        - No access modifiers (No public, private, protected etc)
+        - No classes (Only structs)
+        - No inheritance (Only composition)
+        - No exceptions / try catch finally (Only errors that are values)
+        - No reference type (everything is a value by default)
+        - No pointer arithmatic
+        - No implicit type conversion
+        - No compilation to intermediate language 
+        - No VM (JVM / CLR)
+    * Lightweight
+        - Compiled to Machine Code
+        - Offers tools for cross compilation
+        - Performance is equivalent to C++
+    * Support for concurrency
+        - OS Threads are not directly used to achieve concurrency (2 MB in Linux)
+        - Lightweight thread like infrastructure called "Goroutines" (4 KB)
+        - Builtin Scheduler to execute the Goroutines
+        - Languages features are built for concurrency
+        - go keyword, channel datatype, channel operator ( <- ), range, select case
+        - APIs for concurrency (sync package, sync/atomic package)
+
+
