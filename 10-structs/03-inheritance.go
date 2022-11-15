@@ -48,6 +48,11 @@ func main() {
 	fmt.Println("Accessing the fields")
 	fmt.Println(grapes.Product.Id, grapes.Product.Name, grapes.Product.Cost, grapes.Expiry)
 	fmt.Println(grapes.Id, grapes.Name, grapes.Cost, grapes.Expiry)
+
+	fmt.Println(FormatPerishableProduct(grapes))
+	fmt.Println("After applying 10% discount")
+	ApplyDiscount(&grapes.Product, 10)
+	fmt.Println(FormatPerishableProduct(grapes))
 }
 
 /*
@@ -55,4 +60,17 @@ func main() {
 	Write a function ApplyDiscount that will update the cost of the given "Product" by applying the given discount (IMPORTANT : NOT PerishableProduct)
 
 	Use the above functions with "grapes" and print the result
+
 */
+
+func Format(product Product) string {
+	return fmt.Sprintf("Id = %d, Name = %q, Cost = %v", product.Id, product.Name, product.Cost)
+}
+
+func ApplyDiscount(product *Product, discount float32) {
+	product.Cost = product.Cost * ((100 - discount) / 100)
+}
+
+func FormatPerishableProduct(pp PerishableProduct) string {
+	return fmt.Sprintf("%s, Expiry = %q", Format(pp.Product), pp.Expiry)
+}
