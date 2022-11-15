@@ -23,6 +23,7 @@ type PerishableProduct struct {
 	Expiry string
 }
 
+//overriding the Product.Format() method
 func (pp PerishableProduct) Format() string {
 	return fmt.Sprintf("%s, Expiry = %q", pp.Product.Format(), pp.Expiry)
 }
