@@ -140,3 +140,13 @@ Functions
 
 Assignment-03
     Refactor the solution for Assignment-02 with functions where each function has only one responsibility
+
+
+Day-02 Agenda
+    - pointers
+    - collections (arrays, maps, slices)
+    - modularity
+    - structs
+    - methods
+    - interfaces
+    - concurrency
