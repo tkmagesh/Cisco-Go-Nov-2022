@@ -159,3 +159,4 @@ Collections
         Varying size collection of data of the same type
         - append fn
     Maps
+        collection of key/value of pairs
