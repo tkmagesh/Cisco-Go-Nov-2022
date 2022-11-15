@@ -150,3 +150,11 @@ Day-02 Agenda
     - methods
     - interfaces
     - concurrency
+
+Collections
+    Array
+        Fixed size collection of data of the same type
+
+    Slices
+    
+    Maps
