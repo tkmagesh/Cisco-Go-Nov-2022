@@ -196,6 +196,7 @@ Modularity
     To use a 3rd party module
         go get <module_name> (downloaded to the mod cache - GOATH/pkg)
         go get -u <module_name>
+        
 
     To update the go.mod file
         go mod tidy
