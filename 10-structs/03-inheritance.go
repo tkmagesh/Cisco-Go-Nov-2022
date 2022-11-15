@@ -49,3 +49,10 @@ func main() {
 	fmt.Println(grapes.Product.Id, grapes.Product.Name, grapes.Product.Cost, grapes.Expiry)
 	fmt.Println(grapes.Id, grapes.Name, grapes.Cost, grapes.Expiry)
 }
+
+/*
+	Write a function "Format" that will return a formatted string of the given "Product" (IMPORTANT : NOT PerishableProduct)
+	Write a function ApplyDiscount that will update the cost of the given "Product" by applying the given discount (IMPORTANT : NOT PerishableProduct)
+
+	Use the above functions with "grapes" and print the result
+*/
