@@ -165,4 +165,52 @@ Assignment-04
     Refactor the solution for Assignment-01 
         write a function genPrimes that generates the prime numbers from the given start to end and returns the primeNos
         the main function receives the prime nos and prints them
-        
+
+Modularity  
+    Before Go1.13
+        $GOPATH
+            \bin (3rd party command line tools built in Go)
+            \pkg (3rd party package code)
+            \src
+                \github.com
+                    \tkmagesh77
+                        \my-app
+                            import "github.com/tkmagesh77/utils"
+                        \utils
+    Go1.13 (modules are introduced)
+        module file (go.mod)
+            Name of the module (advisable to have the complete repository path)
+            Go minimum version
+            3rd party module references
+
+    To create a go.mod file
+        go mod init <module_name>
+
+    To run a module
+        go run .
+
+    To create a build
+        go build .
+        go build -o <build_name> .
+
+    To use a 3rd party module
+        go get <module_name> (downloaded to the mod cache - GOATH/pkg)
+        go get -u <module_name>
+
+    To update the go.mod file
+        go mod tidy
+
+    To localize the 3rd party modules
+        go mod vendor
+        go run -mod=vendor . (default if the vendor folder exists)
+        go run -mod=mod . (use the module cache even if the vendor folder exists)
+
+    To ONLY download the dependencies
+        go mod download
+
+    Other usefule commands
+        go mod graph
+        go mod why <module_name>
+    
+    Reference : https://go.dev/ref/mod
+
