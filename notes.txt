@@ -156,5 +156,6 @@ Collections
         Fixed size collection of data of the same type
 
     Slices
-    
+        Varying size collection of data of the same type
+        - append fn
     Maps
