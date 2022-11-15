@@ -28,7 +28,7 @@ func main() {
 	}
 
 	fmt.Println("Before sorting, nos = ", nos)
-	sort(nos)
+	sort(&nos)
 	fmt.Println("After sorting, nos = ", nos)
 
 	var x *[5]int
@@ -44,7 +44,7 @@ func main() {
 
 }
 
-func sort(list [5]int) {
+func sort(list *[5]int) {
 	for i := 0; i <= 3; i++ {
 		for j := i + 1; j <= 4; j++ {
 			if list[i] > list[j] {
