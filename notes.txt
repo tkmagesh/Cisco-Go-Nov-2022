@@ -220,3 +220,7 @@ Concurrency
 
     Cooperative Multitasking
     Preemptive Multitasking
+
+    Channel Behavior
+        * A RECEIVE operation is ALWAYS a blocking a operation
+        * A SEND operation is blocked until a RECEIVE operation is initiated (conditions apply)
