@@ -9,7 +9,8 @@ import (
 
 func main() {
 	rootCtx := context.Background()
-	cancelCtx, cancel := context.WithCancel(rootCtx)
+	dataCtx := context.WithValue(rootCtx, "k1", "v1")
+	cancelCtx, cancel := context.WithCancel(dataCtx)
 	defer cancel()
 
 	go func() {
@@ -23,6 +24,7 @@ func main() {
 }
 
 func fn(ctx context.Context, wg *sync.WaitGroup) {
+	fmt.Println("[fn] data from context :", ctx.Value("k1"))
 	no := 1
 	wg.Add(1)
 	timeoutCtx, cancel := context.WithTimeout(ctx, 10*time.Second)
@@ -44,6 +46,7 @@ LOOP:
 }
 
 func f1(ctx context.Context, wg *sync.WaitGroup) {
+	fmt.Println("[f1] data from context :", ctx.Value("k1"))
 	no := 10
 LOOP:
 	for {
