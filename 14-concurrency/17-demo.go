@@ -26,6 +26,11 @@ func main() {
 		ch2 <- 200
 	}()
 
+	/*
+		The select statement lets a goroutine wait on multiple communication operations.
+
+		A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready.
+	*/
 	for i := 0; i < 3; i++ {
 		select {
 		case ch3 <- 300:
@@ -34,8 +39,8 @@ func main() {
 			fmt.Println(data1)
 		case data2 := <-ch2:
 			fmt.Println(data2)
-		default:
-			fmt.Println("no channel operation succeeded")
+			/* default:
+			fmt.Println("no channel operation succeeded") */
 		}
 	}
 }
