@@ -16,6 +16,7 @@ func main() {
 	for primeNo := range ch {
 		fmt.Println(primeNo)
 	}
+	fmt.Scanln()
 }
 
 func genPrimes(start, end int) <-chan int {
