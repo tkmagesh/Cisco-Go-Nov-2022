@@ -24,5 +24,4 @@ func fn(ch chan int) {
 		ch <- i * 10
 	}
 	close(ch)
-
 }
