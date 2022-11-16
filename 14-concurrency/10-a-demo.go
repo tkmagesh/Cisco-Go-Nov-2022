@@ -16,8 +16,8 @@ func main() {
 	ch := make(chan int)
 	wg.Add(1)
 	go add(100, 200, wg, ch)
-	wg.Wait()
 	result := <-ch //RECEIVE operation
+	wg.Wait()
 	fmt.Println(result)
 }
 
